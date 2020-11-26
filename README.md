@@ -47,4 +47,6 @@ HopperBLP-v2 Vs Hopper-V3
 HalfCheetahBLP-v0 Vs HalfCheetah-v3
 Walker2dBLP-v0 Vs Walker2d-v3
 ```
+The environments has the same parameters, maximum episode steps, rewards calculation etc. The only thing different is how the action_space and observation_space implementation.
 
+For normal environment, the action space are vectors of shape Nx1, where N is the number of joints. In our implementation, we would have N agents, each with action space with shape 1x1. Each agents would also observe the action choices of other agents, therefore, the obervation space is of the shape M+N, where M is the shape of observation space for normal agent, and N is the number of joints.

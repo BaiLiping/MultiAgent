@@ -12,6 +12,12 @@ cd BLPgym
 pip3 install -e .
 ```
 
+The Agents are implemented using Tensorforce. For detailed notes, please visit: https://github.com/tensorforce/tensorforce
+
+```
+pip3 install tensorforce
+```
+
 There are the following environments:
 ```
 register(

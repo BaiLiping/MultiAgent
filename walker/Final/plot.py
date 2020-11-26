@@ -14,9 +14,9 @@ set_type='exponential' #set the type of decay linear, exponential
 exploration=dict(type=set_type, unit='timesteps',
                  num_steps=num_steps,initial_value=initial_value,
                  decay_rate=decay_rate)
-episode_number=1500
+episode_number=2000
 evaluation_episode_number=10
-average_over=50
+average_over=100
 
 
 def moving_average(x, w):
@@ -43,4 +43,4 @@ plt.plot(x,reward_record_single_average,label='MultiAgents Roll Out Training \n 
 plt.xlabel('Episodes Number',fontsize='large')
 plt.ylabel('Episode Reward',fontsize='large')
 plt.legend(loc='upper left',ncol=1, borderaxespad=0,prop={'size': 12})
-plt.savefig('hopper.png')
+plt.savefig('Walker.png')

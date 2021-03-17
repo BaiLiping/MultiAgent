@@ -38,15 +38,15 @@ Termination:
 '''
 
 #setparameters
-num_steps=100 #update exploration rate over n steps
+num_steps=5000 #update exploration rate over n steps
 initial_value=0.9 #initial exploartion rate
-decay_rate=0.5 #exploration rate decay rate
+decay_rate=0.8 #exploration rate decay rate
 set_type='exponential' #set the type of decay linear, exponential
 exploration=dict(type=set_type, unit='timesteps',
                  num_steps=num_steps,initial_value=initial_value,
                  decay_rate=decay_rate)
 
-episode_number=1500
+episode_number=20000
 evaluation_episode_number=10
 average_over=50
 
@@ -55,7 +55,7 @@ def moving_average(x, w):
 
 length=np.zeros(episode_number)
 measure_length=moving_average(length,average_over)
-'''
+
 #Normal Agent
 environment_normal=Environment.create(environment='gym',level='Hopper-v3')
 reward_record_normal=[]
@@ -97,8 +97,8 @@ for _ in tqdm(range(evaluation_episode_number)):
 pickle.dump(evaluation_reward_record_normal, open( "evaluation_normal_record.p", "wb"))
 agent_normal.close()
 environment_normal.close()
-'''
-reward_record_normal_average=pickle.load(open( "normal_average_record.p", "rb"))
+
+#reward_record_normal_average=pickle.load(open( "normal_average_record.p", "rb"))
 
 #training single action agent
 environment_single = Environment.create(environment='gym', level='HopperBLP-v2')

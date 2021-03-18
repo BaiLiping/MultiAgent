@@ -80,6 +80,6 @@ plt.fill_between(x, single_average-single_standard_deviation, single_average+sin
 plt.xlabel('Episodes Number',fontsize='large')
 plt.ylabel('Episode Reward',fontsize='large')
 plt.legend(loc='upper left',ncol=1, borderaxespad=0,prop={'size': 12})
-plt.savefig('Hopper.png')
+plt.savefig('Swimmer.png')
 
 

@@ -45,8 +45,8 @@ Termination:
                     ang > -1.0 and ang < 1.0)
 '''
 
-episode_number=1000
-average_over=50
+episode_number=5000
+average_over=100
 evaluation_episode_number=10
 
 def set_exploration(num_steps,initial_value,decay_rate,set_type='exponential'):

@@ -18,8 +18,8 @@ if __name__ == "__main__":
     #training single action agent
     environment_single = Environment.create(environment='gym', level='SwimmerBLP-v0')
     reward_record_single=[]
-    agent_first = Agent.create(agent='agent_single.json', environment=environment_single,exploration=exploration)
-    agent_second = Agent.create(agent='agent_single.json',environment=environment_single,exploration=exploration)
+    agent_first = Agent.create(agent='agent.json', environment=environment_single,exploration=exploration)
+    agent_second = Agent.create(agent='agent.json',environment=environment_single,exploration=exploration)
 
     print('training agent without single action')
     for _ in tqdm(range(episode_number)):

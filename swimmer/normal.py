@@ -6,8 +6,8 @@ import pickle
 from tqdm import tqdm
 import gym
 
-episode_number=200
-average_over=10
+episode_number=300
+average_over=50
 evaluation_episode_number=10
 #setparameters
 def set_exploration(num_steps,initial_value,decay_rate,set_type='exponential'):
